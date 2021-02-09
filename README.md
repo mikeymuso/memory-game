@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+## EMOJI Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small React project based on the challenge set out by The Odin Project. It is created with state and hooks and simple components.
 
-## Available Scripts
+## Project Status
 
-In the project directory, you can run:
+This project is complete
 
-### `npm start`
+## Project Screen Shots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![memory game](https://github.com/mikeymuso/memory-game/blob/master/public/images/screenshot.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation and Setup Instructions
 
-### `npm test`
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Installation:
 
-### `npm run build`
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To Start:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To Visit App:
 
-### `npm run eject`
+`localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Reflection
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- This was a relatively simple project to take on. I had previously reached this point in The Odin Project and found myslef unfamiliar with React State & Hooks and creating function based components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- I spent time learning React better with online courses and tutorials before returning to pick up this project. Once I had spent time learning this area of React I was able to implement this app with a fair amount of ease.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The most challenging part was coming up with an algorithm which would return a random list of cards whilst ensuring at least one card is yet to be clicked. Although with the use of Math.Random() and filtering the array this was a relatively simple solution.
 
-## Learn More
+- For this project I decided to work with inline-styling. As this was to remain a simple project I thought it would be suitable to implement this rather than creating seperate CSS files.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- I enjoyed created this task, as little projects help me improve my problem-solving and prepare me better for interview coding challenges. I also feel it's important to get hands dirty and create code from scratch without the aid of a tutorial as this is where I feel my knowledge is best concreted.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- This project also helped me to practice using constructor functions (for creating the card objects) as this was an area I hadn't revisited for a while.
 
-### Code Splitting
+## Future Improvements/Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I am happy with how this project is as it stands

@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Card from './components/Card';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import getRandomCards from './hooks/getRandomCards';
+import resetClicks from './hooks/resetClicks';
+import './index.css';
 
-function App() {
+const App = () => {
+  const [highScore, setHighScore] = useState(0);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
+  const [cardArray, setCardArray] = useState([]);
+  const [win, setWin] = useState(false);
+
+  useEffect(() => {
+    setCardArray(getRandomCards(setWin));
+  }, [currentScore]);
+
+  const handleCardClick = card => {
+    if (card.clicked) {
+      setGameOver(true);
+      setHighScore(currentScore);
+      setCurrentScore(0);
+      resetClicks();
+    } else {
+      setCurrentScore(currentScore + 1);
+      setGameOver(false);
+      card.clicked = true;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header
+        highScore={highScore}
+        currentScore={currentScore}
+        gameOver={gameOver}
+        win={win}
+      />
+      <main
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          width: '100%',
+          margin: 'auto',
+          backgroundColor: '#FFF4BA',
+          padding: '40px 0',
+          boxSizing: 'border-box',
+        }}
+      >
+        {cardArray.map(card => (
+          <Card key={card.id} card={card} handleCardClick={handleCardClick} />
+        ))}
+      </main>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;

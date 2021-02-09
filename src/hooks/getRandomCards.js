@@ -1,14 +1,33 @@
 import cards from '../data/cards';
 
+// Fisher-Yates shuffle
+const shuffleArray = array => {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
 const unclickedCards = () => {
   return cards.filter(card => card.clicked === false);
 };
 
 const getRandomCards = setWin => {
-  let cardArray = [];
+  let cardArray = [],
+    unclickedArray;
 
   // Ensure there's always at least one unclicked card displayed
-  let unclickedArray = unclickedCards();
+  unclickedArray = unclickedCards();
   if (unclickedArray.length > 0) {
     cardArray.push(
       unclickedArray[Math.floor(Math.random() * unclickedArray.length)]
@@ -29,7 +48,7 @@ const getRandomCards = setWin => {
     }
   }
 
-  return cardArray;
+  return shuffleArray(cardArray);
 };
 
 export default getRandomCards;

@@ -28,6 +28,9 @@ const getRandomCards = setWin => {
 
   // Ensure there's always at least one unclicked card displayed
   unclickedArray = unclickedCards();
+
+  console.log(unclickedArray);
+
   if (unclickedArray.length > 0) {
     cardArray.push(
       unclickedArray[Math.floor(Math.random() * unclickedArray.length)]
@@ -40,8 +43,6 @@ const getRandomCards = setWin => {
   while (cardArray.length < 6) {
     let randInt = Math.floor(Math.random() * 8);
     let randCard = cards[randInt];
-
-    console.log(randInt);
 
     if (!cardArray.includes(randCard)) {
       cardArray.push(randCard);

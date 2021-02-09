@@ -11,8 +11,6 @@ const Card = ({ card, handleCardClick }) => {
     boxShadow: '1px 1px 3px orange',
   };
 
-  console.log(card);
-
   return (
     <div onClick={() => handleCardClick(card)} style={style}>
       <div style={{ width: '80%', margin: 'auto' }}>
